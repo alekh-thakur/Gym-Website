@@ -90,7 +90,7 @@
   
   #home::before {
     content: "";
-    background-image: url("back3.jpg");
+    background-image: url("captures/back3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -193,19 +193,19 @@
   }
   
   #program1::before {
-    background-image: url("program1.jpeg");
+    background-image: url("captures/program1.jpeg");
   }
   
   #program2::before {
-    background-image: url("program2.jpg");
+    background-image: url("captures/program2.jpg");
   }
   
   #program3::before {
-    background-image: url("program3.png");
+    background-image: url("captures/program3.png");
   }
   
   #program4::before {
-    background-image: url("program4.jpeg");
+    background-image: url("captures/program4.jpeg");
   }
   
   .programs::after {

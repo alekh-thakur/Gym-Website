@@ -1,0 +1,619 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Header and Navigation */
+  .header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 25px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo img {
+    height: 60px;
+    width: 60px;
+  }
+  
+  #gym_name {
+    margin-left: 15px;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    color: #ffffff;
+  }
+  
+  #navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  #navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  #navbar a:hover {
+    border: 3px solid rgb(10, 234, 66);
+    border-radius: 8px;
+  }
+  
+  /* Home Section */
+  #home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  #home::before {
+    content: "";
+    background-image: url("back3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+  }
+  
+  #home::after {
+    content: "";
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  #intro {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  #quote {
+    color: #79f149;
+    font-weight: bolder;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
+  }
+  
+  #home div a {
+    background-color: rgb(10, 234, 66);
+    border: 2px solid rgb(10, 234, 66);
+    font-size: 1rem;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  #home div a:hover {
+    background-color: transparent;
+    color: rgb(10, 234, 66);
+  }
+  
+  /* Facility Section */
+  #facility {
+    background-color: rgb(24, 14, 14);
+    padding: 60px 20px;
+    width: 100%;
+    position: relative;
+  }
+  
+  #offering_heading {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-family: "Roboto Mono", monospace;
+  }
+  
+  .programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .programs {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .programs::before {
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  #program1::before {
+    background-image: url("program1.jpeg");
+  }
+  
+  #program2::before {
+    background-image: url("program2.jpg");
+  }
+  
+  #program3::before {
+    background-image: url("program3.png");
+  }
+  
+  #program4::before {
+    background-image: url("program4.jpeg");
+  }
+  
+  .programs::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    z-index: 1;
+  }
+  
+  .overlay_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  /* Program Descriptions */
+  #program_description {
+    padding: 60px 20px;
+    background-color: rgb(24, 14, 14);
+  }
+  
+  .program-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .program-section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .program-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+  
+  .program-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+  
+  .program-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 0 20px;
+  }
+  
+  .program-heading {
+    display: inline-block;
+    border: 3px solid #393328;
+    border-radius: 16px;
+    padding: 6px 12px;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .program-description {
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .bullet-points {
+    margin-top: 20px;
+  }
+  
+  .bullet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .bullet img {
+    height: 15px;
+    width: 25px;
+    margin-right: 10px;
+  }
+  
+  /* Membership Section */
+  #membership {
+    background-color: rgb(65, 129, 69);
+    padding: 60px 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  #membership_heading {
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid white;
+    border-radius: 17px;
+    padding: 5px 15px;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  #membership_quote {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  .memberships-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .membership_plans {
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px;
+    width: 300px;
+    margin: 15px;
+  }
+  
+  .membership_details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .membership_details p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .bullet_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .charges {
+    font-size: 0.9rem;
+    color: rgba(91, 87, 86, 0.586);
+    margin-top: 30px;
+    line-height: 1.5;
+  }
+  
+  .charges a {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+  }
+  
+  /* About Us Section */
+  #about_us {
+    background-color: rgb(24, 14, 14);
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  #about_us_heading {
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid white;
+    border-radius: 17px;
+    padding: 5px 15px;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  #about_gym {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  #owner_gym {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  .form-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  
+  #form_heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  #form_details form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #form_details input,
+  #form_details select {
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  #form_submit {
+    background-color: #79f149;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #form_submit:hover {
+    background-color: #5fc332;
+  }
+  
+  .owner-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  
+  .owner-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  /* Footer Section */
+  #bottom_page {
+    background-color: rgb(24, 14, 14);
+    padding: 60px 20px 20px;
+    text-align: center;
+  }
+  
+  #bottom_page hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 40px;
+  }
+  
+  #footer_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  #footer_logo img {
+    height: 60px;
+    width: 60px;
+  }
+  
+  #footer_name {
+    margin-left: 15px;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  #footer_nav {
+    color: white;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  #footer_navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #footer_navbar a {
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  #footer_navbar a:hover{
+    color: #79f149;
+    transition: all 0.8s ease-in;
+  }
+  footer {
+    background-color: rgb(24, 14, 14);
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 1024px) {
+    html {
+      font-size: 14px;
+    }
+    
+    .program-section {
+      flex-direction: column !important;
+    }
+    
+    .program-image, .program-content {
+      max-width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+    
+    .header {
+      flex-direction: column;
+      padding: 10px;
+    }
+    
+    #navbar {
+      margin-top: 15px;
+      justify-content: center;
+    }
+    
+    #logo {
+      position: relative;
+      top: 0;
+      left: 0;
+      justify-content: center;
+    }
+    
+    #intro {
+      font-size: 2rem;
+    }
+    
+    #membership_quote {
+      font-size: 1.7rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    html {
+      font-size: 12px;
+    }
+    
+    #navbar a {
+      margin: 3px;
+      padding: 5px 8px;
+      font-size: 14px;
+    }
+    
+    #intro {
+      font-size: 1.8rem;
+    }
+    
+    .programs {
+      height: 200px;
+      width: 200px;
+    }
+    
+    .overlay_text {
+      font-size: 1.2rem;
+    }
+    
+    .program-description {
+      font-size: 1.3rem;
+    }
+  }
